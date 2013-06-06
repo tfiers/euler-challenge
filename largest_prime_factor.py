@@ -7,13 +7,11 @@ What is the largest prime factor of the number 600851475143 ?'''
 
 
 def solve():
-    factors = []
     n = 600851475143
     posf = 3  # pos(sible) f(actor)
     while n > 1:
         if n % posf == 0:
             # The possible factor is indeed a factor of n. (*)
-            factors.append(posf)
             n /= posf
         elif posf > sqrt(n):
             # If n is not a prime number, it could be written as n = a*b.
@@ -30,7 +28,7 @@ def solve():
             # Note: a more complex algorithm for finding the next factor takes
             # longer to execute than this simple version. See the file
             # 'largest_prime_factor.py' for code and timings.
-    return max(factors)
+    return posf
 
 
 def complex_solve():
