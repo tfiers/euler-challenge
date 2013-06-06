@@ -37,4 +37,5 @@ for sol in solutions:
     print 'Code:'
     print prettify(inspect.getsource(sol.solve))
     print '------------------'
-raw_input()  # Wait for input before shutting down.
+print '\n', 'Press Enter to exit'
+raw_input()
