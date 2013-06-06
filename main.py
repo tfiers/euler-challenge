@@ -1,5 +1,5 @@
-import os
-import inspect
+import os  # For accessing the other python code in this folder.
+import inspect  # For converting source code to string.
 
 # Make a list of all files in the c(urrent) w(orking) d(irectory).
 files = os.listdir(os.getcwd())
@@ -37,4 +37,4 @@ for sol in solutions:
     print 'Code:'
     print prettify(inspect.getsource(sol.solve))
     print '------------------'
-raw_input()
+raw_input()  # Wait for input before shutting down.
